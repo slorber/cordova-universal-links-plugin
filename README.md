@@ -680,6 +680,8 @@ Let's create new application to play with:
   Starting: Intent { act=android.intent.action.VIEW dat=http://anotherhost.com/path pkg=com.example.ul }
   Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=http://anotherhost.com/path flg=0x10000000 pkg=com.example.ul }
   ```
+  
+Note: if you get this error with a defined host, you might try to use an url with `/.MainActivity` at the end: `adb shell am start -W -a android.intent.action.VIEW -d "http://myhost.com/any/path" com.example.ul/.MainActivity`
 
 This way you can experiment with your Android application and check how it corresponds to different links.
 
